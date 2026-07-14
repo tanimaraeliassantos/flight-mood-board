@@ -31,16 +31,16 @@ module.exports = {
 				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 		],
-		resolve: {
-			extensions: ['.js', '.vue', '.json'],
-			alias: {
-				vue$: 'vue/dist/vue.esm-bundler.js',
-			},
+	},
+	resolve: {
+		extensions: ['.js', '.vue', '.json'],
+		alias: {
+			vue$: 'vue/dist/vue.esm-bundler.js',
 		},
-		devServer: {
-			port: 8080,
-			hot: true,
-			open: true,
-		},
+	},
+	devServer: {
+		port: 8080,
+		hot: true,
+		open: true,
 	},
 };
