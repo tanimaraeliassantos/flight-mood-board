@@ -1,0 +1,46 @@
+{
+	"name": "flight-mood-board",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"serve": "webpack serve",
+		"build": "webpack --mode production",
+		"test": "mocha --require @babel/register 'test/**/*.test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tanimaraeliassantos/flight-mood-board.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/tanimaraeliassantos/flight-mood-board/issues"
+	},
+	"homepage": "https://github.com/tanimaraeliassantos/flight-mood-board#readme",
+	"dependencies": {
+		"vue": "^3.5.39"
+	},
+	"devDependencies": {
+		"@babel/core": "^8.0.1",
+		"@babel/preset-env": "^8.0.2",
+		"@babel/register": "^8.0.1",
+		"@vue/compiler-sfc": "^3.5.39",
+		"babel-loader": "^10.1.1",
+		"chai": "^6.2.2",
+		"css-loader": "^7.1.4",
+		"html-webpack-plugin": "^5.6.7",
+		"mocha": "^11.7.6",
+		"sass": "^1.101.0",
+		"sass-loader": "^17.0.0",
+		"vue-loader": "^17.4.2",
+		"vue-style-loader": "^4.1.3",
+		"webpack": "^5.108.4",
+		"webpack-cli": "^7.2.1",
+		"webpack-dev-server": "^6.0.0"
+	}
+}
