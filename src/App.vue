@@ -4,31 +4,39 @@
 			<h1>Flight Mood Board</h1>
 			<p>Select your vibe, match with dream flight destinations.</p>
 		</header>
+
 		<MoodSelector v-model="selectedMood" />
+		<DestinationGrid :items="filteredDestinations" />
 	</div>
 </template>
 
 <script>
 	import { ref, computed, defineComponent } from 'vue';
 	import MoodSelector from './components/MoodSelector.vue';
+	import DestinationGrid from './components/DestinationGrid.vue';
+	import { destinations, filterDestinations } from './utils/destinations.js';
 
 	export default defineComponent({
 		name: 'App',
-		components: {
-			MoodSelector,
-		},
+		components: { MoodSelector, DestinationGrid },
 		setup() {
 			const selectedMood = ref('all');
 
+			const filteredDestinations = computed(() => {
+				return filterDestinations(destinations, selectedMood.value);
+			});
+
 			return {
 				selectedMood,
+				filteredDestinations,
 			};
 		},
 	});
 </script>
 
 <style lang="scss">
-	@import './styles/main';
+	@use './styles/main';
+	@use './styles/variables' as *;
 
 	.app-header {
 		text-align: center;
