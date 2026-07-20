@@ -4,7 +4,7 @@ Flight Mood Board is a lightweight interactive application built with **Vue 3** 
 
 This project was built manually from scratch to demonstrate a solid understanding of a modern frontend build pipeline, creating the application architecture without using scaffolding tools.
 
-![Flight Mood Board](flight-mood-board-app-showcase.gif)
+![Flight Mood Board](/flight-mood-board-app-showcase.gif)
 
 ---
 
