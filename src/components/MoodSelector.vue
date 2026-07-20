@@ -1,18 +1,14 @@
 <template>
 	<div class="mood-selector">
-		<h2>Select Your Mood</h2>
-		<div class="mood-options">
-			<button
-				v-for="mood in moods"
-				:key="mood.value"
-				:class="['mood-btn', { active: modelValue === mood.value }]"
-				@click="$emit('update:modelValue', mood.value)"
-			>
-				<span class="icon">{{ mood.icon }}</span>
-				<span class="label">{{ mood.label }}</span>
-			</button>
-		</div>
-		<p v-if="selectedMood">You selected: {{ selectedMood }}</p>
+		<button
+			v-for="mood in moods"
+			:key="mood.value"
+			:class="['mood-btn', { active: modelValue === mood.value }]"
+			@click="$emit('update:modelValue', mood.value)"
+		>
+			<span class="icon">{{ mood.icon }}</span>
+			<span class="label">{{ mood.label }}</span>
+		</button>
 	</div>
 </template>
 
@@ -27,30 +23,24 @@
 				required: true,
 			},
 		},
-
 		emits: ['update:modelValue'],
 		setup() {
 			const moods = [
-				{ value: 'happy', label: 'Happy', icon: '😊' },
-				{ value: 'sad', label: 'Sad', icon: '😢' },
-				{ value: 'angry', label: 'Angry', icon: '😠' },
-				{ value: 'excited', label: 'Excited', icon: '🤩' },
+				{ label: 'All Places', value: 'all', icon: '✈️' },
+				{ label: 'Adventure', value: 'adventure', icon: '🧗' },
+				{ label: 'Relax', value: 'relax', icon: '🌴' },
+				{ label: 'Culture', value: 'culture', icon: '🏛️' },
+				{ label: 'Food', value: 'food', icon: '🍜' },
 			];
-			return { moods };
-		},
 
-		computed: {
-			selectedMood() {
-				const mood = this.moods.find((m) => m.value === this.modelValue);
-				return mood ? mood.label : null;
-			},
+			return { moods };
 		},
 	});
 </script>
 
 <style lang="scss" scoped>
-	@import '../styles/variables';
-	@import '../styles/mixins';
+	@use '../styles/variables' as *;
+	@use '../styles/mixins' as *;
 
 	.mood-selector {
 		@include flex-center;
