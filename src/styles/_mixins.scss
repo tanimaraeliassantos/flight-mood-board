@@ -1,0 +1,20 @@
+// Reusable styling patterns
+@use 'variables' as *;
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin card-shadow {
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+	transition:
+		transform #{$transition-speed} ease,
+		box-shadow #{$transition-speed} ease;
+
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+	}
+}

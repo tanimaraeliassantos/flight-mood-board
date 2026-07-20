@@ -1,0 +1,16 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+body {
+	margin: 0;
+	font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+	background-color: $bg-light;
+	color: $text-dark;
+	-webkit-font-smoothing: antialiased;
+}
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+}
