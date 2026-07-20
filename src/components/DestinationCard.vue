@@ -6,7 +6,7 @@
 		</div>
 		<div class="content">
 			<h3>{{ destination.name }}</h3>
-			<button class="book-btn">Find Flights ✈️</button>
+			<button class="book-btn">Find Flights</button>
 		</div>
 	</div>
 </template>
@@ -26,8 +26,8 @@
 </script>
 
 <style lang="scss" scoped>
-	@import '../styles/variables';
-	@import '../styles/mixins';
+	@use '../styles/variables' as *;
+	@use '../styles/mixins' as *;
 
 	.destination-card {
 		background: white;
